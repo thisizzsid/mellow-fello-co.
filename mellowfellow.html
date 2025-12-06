@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mellow Fellow Co. | Hand-Rolled Happiness</title>
+    <!-- 4. About The Founder (distinct style) -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mellow Fellow Co. | Hand-Rolled Happiness</title>
+        <!-- Load Tailwind CSS from CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Use Inter font family -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'moss-green': '#8a9a5b',
+                            'soft-cream': '#f8f5ed',
+                            'deep-forest': '#3c4731',
+                        },
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            /* Smooth scroll for navigation */
+            html { scroll-behavior: smooth; }
+
+            /* Custom style for the subtle texture in the hero section */
+            .hero-bg {
+                background-color: #8a9a5b;
+                background-image: radial-gradient(circle at 100% 150%, rgba(255,255,255,.1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,.05) 100%);
+                position: relative;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body class="bg-soft-cream text-deep-forest antialiased">
+        <!-- Health warning modal (per Indian government guidelines) -->
+        <div id="healthWarningModal" class="hidden fixed inset-0 flex items-center justify-center" style="z-index:9999;">
+            <div class="absolute inset-0 bg-black/60" aria-hidden="true"></div>
+            <div role="dialog" aria-modal="true" aria-labelledby="hw-title" class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full mx-4 p-6 transform transition-all">
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0">
+                        <svg class="w-12 h-12 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M5 12a7 7 0 1114 0 7 7 0 01-14 0z" />
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 id="hw-title" class="text-xl font-extrabold text-deep-forest mb-2">WARNING</h3>
+                        <p class="text-sm font-bold text-red-600 uppercase mb-2">Smoking is injurious to health</p>
+                        <p class="text-sm text-gray-700 mb-4">Tobacco use causes serious diseases and is harmful to you and those around you. It is advised to quit smoking. For help and support, consult a healthcare professional.</p>
+                        <div class="flex justify-end">
+                            <button id="hwCloseBtn" class="px-4 py-2 bg-red-600 text-white rounded-lg shadow hover:bg-red-700 transition">I Understand</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1. Navigation Bar (Header) -->
+        <header class="sticky top-0 z-50 bg-soft-cream/95 backdrop-blur-sm shadow-md">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <!-- Logo Placeholder Space -->
+                <div id="logo-space" class="flex items-center gap-4">
+                    <!-- Logo image (saved locally or in iCloud) -->
+                    <img src="/Users/thisizzsid/Library/Mobile Documents/com~apple~CloudDocs/Downloads/Gemini_Generated_Image_twulxhtwulxhtwul.png" alt="Mellow Fellow Co. logo" class="h-16 sm:h-24 object-contain">
+                    <div class="text-xl font-bold tracking-widest text-deep-forest leading-none">
+                        <span class="text-moss-green text-2xl font-extrabold leading-none">Mellow</span>
+                        <span class="text-deep-forest text-lg font-light leading-none block">Fellow Co.</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="space-x-4">
+                    <a href="#rolls" class="text-deep-forest hover:text-moss-green transition duration-300 font-medium hidden sm:inline">Rolls</a>
+                    <a href="#about-us" class="text-deep-forest hover:text-moss-green transition duration-300 font-medium hidden sm:inline">about us</a>
+                    <a href="#contact" class="px-4 py-2 bg-moss-green text-soft-cream rounded-lg shadow-md hover:bg-deep-forest transition duration-300 text-sm font-semibold">Connect</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 2. Hero Section (Welcome & Tagline) -->
+        <section class="hero-bg text-soft-cream py-24 md:py-40 text-center rounded-b-xl shadow-lg">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 drop-shadow-lg">Hand-Rolled Happiness.</h1>
+                <h2 class="text-xl md:text-3xl font-light tracking-wide opacity-90">For the Fellows, by the Fellows.</h2>
+                <a href="#rolls" class="mt-10 inline-block px-8 py-3 bg-soft-cream text-moss-green text-lg font-semibold rounded-full shadow-xl hover:bg-deep-forest hover:text-soft-cream transition duration-500 transform hover:scale-105">Discover The Rolls</a>
+            </div>
+        </section>
+
+        <!-- 3. Product Showcase (The Rolls) -->
+        <section id="rolls" class="py-20 md:py-32 container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-4 text-deep-forest">The Signature Collection</h3>
+            <p class="text-center text-lg text-gray-500 mb-16">Meticulously crafted papers, designed for the purest experience.</p>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Product Card 1: The Classic -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl transform transition duration-500 hover:scale-[1.02]">
+                    <div class="w-full h-48 bg-moss-green/20 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-deep-forest/70 font-semibold">Image Placeholder: The Classic</span>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-deep-forest">The Classic</h4>
+                    <p class="text-gray-600 mb-4">Our flagship, ultra-thin rice paper. Designed for a slow, even burn, ensuring the pure flavor of your blend is the star. Clean, reliable, and always ready.</p>
+                    <span class="inline-block text-moss-green font-medium border-b-2 border-moss-green">View Details & Specs</span>
+                </div>
+
+                <!-- Product Card 2: The Hemp -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl transform transition duration-500 hover:scale-[1.02]">
+                    <div class="w-full h-48 bg-moss-green/30 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-deep-forest/70 font-semibold">Image Placeholder: The Hemp</span>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-deep-forest">The Organic Hemp</h4>
+                    <p class="text-gray-600 mb-4">Unbleached, organically grown hemp paper. A natural, slightly thicker texture provides an earthy foundation for an authentic, leisurely session.</p>
+                    <span class="inline-block text-moss-green font-medium border-b-2 border-moss-green">View Details & Specs</span>
+                </div>
+
+                <!-- Product Card 3: The King -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl transform transition duration-500 hover:scale-[1.02]">
+                    <div class="w-full h-48 bg-moss-green/40 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-deep-forest/70 font-semibold">Image Placeholder: The King</span>
+                    </div>
+                    <h4 class="text-2xl font-semibold mb-2 text-deep-forest">The King Size</h4>
+                    <p class="text-gray-600 mb-4">An extended-length roll designed for sharing and savoring. The same exceptional quality in a larger format for those longer, better sessions.</p>
+                    <span class="inline-block text-moss-green font-medium border-b-2 border-moss-green">View Details & Specs</span>
+                </div>
+            </div>
+
+            <p class="text-center mt-16 text-xl text-deep-forest/80 font-medium italic">Available exclusively through authorized wholesale partners.</p>
+        </section>
+
+        <!-- 4. About The Founder (distinct style) -->
+        <section id="about-us" class="py-20 md:py-32 bg-deep-forest text-soft-cream">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl font-bold text-center mb-4 text-soft-cream">About The Founder</h3>
+                <p class="text-center text-lg text-soft-cream/90 mb-12 max-w-3xl mx-auto">Meet the founder behind Mellow Fellow Co. — a storyteller, craftsman, and curator of small, honest moments.</p>
+
+                <!-- Founder feature (distinct from product cards) -->
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-white/5 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="IMG_0980.jpg" alt="Founder" class="w-36 h-36 rounded-full object-cover border-3 border-moss-green/30">
+                        </div>
+
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-bold text-soft-cream mb-1">Siddhant Anand</h4>
+                            <p class="text-moss-green font-semibold mb-3">Co-Founder & Vision Lead</p>
+                            <p class="text-soft-cream/90 mb-4 leading-relaxed">coming </p>
+                            <p class="text-sm italic text-soft-cream/80">"We don't just hold the blend; we elevate the ritual"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission Statement (contrasting card) -->
+                <div class="mt-12 max-w-4xl mx-auto bg-soft-cream/10 border-l-4 border-moss-green p-8 rounded-lg">
+                    <h4 class="text-2xl font-bold text-soft-cream mb-3">Our Mission</h4>
+                    <p class="text-lg text-soft-cream/90 leading-relaxed">At Mellow Fellow Co., we're committed to creating the finest rolling papers that elevate every moment. Our founders brought together decades of combined experience in craftsmanship, quality, and community to build a brand that stands for authenticity, sustainability, and pure satisfaction. We don't just make papers—we create experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Brand Ethos (Our Story) -->
+        <section id="ethos" class="bg-deep-forest text-soft-cream py-20 md:py-32">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h3 class="text-4xl font-bold mb-6">The Mellow Fellow Promise</h3>
+                <p class="text-lg leading-relaxed opacity-90 mb-8">We believe the vessel is just as important as what's inside. <strong>Mellow Fellow Co.</strong> was born from the desire for a cleaner, smoother, and more authentic paper experience. Hand-Rolled Happiness is our commitment to quality—every paper, every detail meticulously considered.</p>
+                <div class="inline-block p-2 bg-moss-green rounded-full shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-soft-cream"><circle cx="12" cy="12" r="10"></circle><path d="M10 16.5l2-2 2 2"></path><path d="M12 12V6"></path></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact & Connect (Footer) -->
+        <footer id="contact" class="bg-soft-cream py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h4 class="text-3xl font-semibold mb-8 text-moss-green">Connect With The Fellows</h4>
+                <div class="flex flex-col md:flex-row justify-center gap-8 md:gap-16 mb-12">
+                    <div class="text-center"><p class="font-bold text-lg text-deep-forest mb-1">Wholesale Inquiries</p><a href="mailto:wholesale@mellowfellowco.com" class="text-gray-600 hover:text-moss-green transition duration-300">wholesale@mellowfellowco.com</a></div>
+                    <div class="text-center"><p class="font-bold text-lg text-deep-forest mb-1">General Questions</p><a href="mailto:hello@mellowfellowco.com" class="text-gray-600 hover:text-moss-green transition duration-300">hello@mellowfellowco.com</a></div>
+                </div>
+                <div class="flex justify-center space-x-6 mb-12">
+                    <a href="#" aria-label="Instagram" class="text-deep-forest hover:text-moss-green transition duration-300 transform hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="#" aria-label="Twitter/X" class="text-deep-forest hover:text-moss-green transition duration-300 transform hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                </div>
+                <p class="text-sm text-gray-400">&copy; 2025 Mellow Fellow Co. All Rights Reserved. Not for ordering. A brand built with care by fellow enthusiasts. -Siddhant Anand</p>
+            </div>
+        </footer>
+
+        <!-- Team section (kept earlier cards) -->
+        <section class="py-12 container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h4 class="text-2xl font-bold text-deep-forest mb-6">Team</h4>
+                <div id="teamGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="team-card bg-white rounded-2xl shadow-xl overflow-hidden"><div class="w-full h-48 bg-gradient-to-b from-moss-green/30 to-moss-green/10 flex items-center justify-center"><span class="text-deep-forest/70 font-semibold">Team Member Photo</span></div><div class="p-6"><h5 class="text-xl font-bold text-deep-forest mb-1">Team Member</h5><p class="text-moss-green font-semibold mb-2">Role</p><p class="text-gray-600 text-sm">Short bio or notes about this team member.</p></div></div>
+                    <div class="team-card bg-white rounded-2xl shadow-xl overflow-hidden"><div class="w-full h-48 bg-gradient-to-b from-moss-green/25 to-moss-green/8 flex items-center justify-center"><span class="text-deep-forest/70 font-semibold">Team Member Photo</span></div><div class="p-6"><h5 class="text-xl font-bold text-deep-forest mb-1">Team Member</h5><p class="text-moss-green font-semibold mb-2">Role</p><p class="text-gray-600 text-sm">Short bio or notes about this team member.</p></div></div>
+                    <div class="team-card bg-white rounded-2xl shadow-xl overflow-hidden"><div class="w-full h-48 bg-gradient-to-b from-moss-green/20 to-moss-green/5 flex items-center justify-center"><span class="text-deep-forest/70 font-semibold">Team Member Photo</span></div><div class="p-6"><h5 class="text-xl font-bold text-deep-forest mb-1">Team Member</h5><p class="text-moss-green font-semibold mb-2">Role</p><p class="text-gray-600 text-sm">Short bio or notes about this team member.</p></div></div>
+                </div>
+
+                <template id="teamCardTemplate"><div class="team-card bg-white rounded-2xl shadow-xl overflow-hidden"><div class="w-full h-48 bg-gradient-to-b from-moss-green/30 to-moss-green/10 flex items-center justify-center"><span class="text-deep-forest/70 font-semibold">New Team Photo</span></div><div class="p-6"><h5 class="text-xl font-bold text-deep-forest mb-1">New Team Member</h5><p class="text-moss-green font-semibold mb-2">Role</p><p class="text-gray-600 text-sm">Short bio or notes about this team member.</p></div></div></template>
+            </div>
+        </section>
+
+        <!-- Health warning script: show modal on each page open -->
+        <script>
+            (function () {
+                function showHealthModal() {
+                    var modal = document.getElementById('healthWarningModal');
+                    var closeBtn = document.getElementById('hwCloseBtn');
+                    if (!modal) return;
+                    modal.classList.remove('hidden');
+                    function close() { modal.classList.add('hidden'); }
+                    if (closeBtn) closeBtn.addEventListener('click', close);
+                    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+                }
+                if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', showHealthModal); else showHealthModal();
+            })();
+        </script>
+
+        <!-- Team add button script (inert without button) -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const addBtn = document.getElementById('addTeamBtn');
+                const teamGrid = document.getElementById('teamGrid');
+                const template = document.getElementById('teamCardTemplate');
+                if (addBtn && teamGrid && template) addBtn.addEventListener('click', function () { const clone = template.content.cloneNode(true); teamGrid.appendChild(clone); setTimeout(() => { const cards = teamGrid.querySelectorAll('.team-card'); if (cards.length) cards[cards.length - 1].scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 50); });
+            });
+        </script>
+    </body>
+    </html>
