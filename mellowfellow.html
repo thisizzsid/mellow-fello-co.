@@ -31,18 +31,7 @@
                 }
             }
         </script>
-        <style>
-            /* Smooth scroll for navigation */
-            html { scroll-behavior: smooth; }
-
-            /* Custom style for the subtle texture in the hero section */
-            .hero-bg {
-                background-color: #8a9a5b;
-                background-image: radial-gradient(circle at 100% 150%, rgba(255,255,255,.1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,.05) 100%);
-                position: relative;
-                overflow: hidden;
-            }
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body class="bg-soft-cream text-deep-forest antialiased">
         <!-- Health warning modal (per Indian government guidelines) -->
@@ -210,30 +199,8 @@
             </div>
         </section>
 
-        <!-- Health warning script: show modal on each page open -->
-        <script>
-            (function () {
-                function showHealthModal() {
-                    var modal = document.getElementById('healthWarningModal');
-                    var closeBtn = document.getElementById('hwCloseBtn');
-                    if (!modal) return;
-                    modal.classList.remove('hidden');
-                    function close() { modal.classList.add('hidden'); }
-                    if (closeBtn) closeBtn.addEventListener('click', close);
-                    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
-                }
-                if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', showHealthModal); else showHealthModal();
-            })();
-        </script>
-
-        <!-- Team add button script (inert without button) -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const addBtn = document.getElementById('addTeamBtn');
-                const teamGrid = document.getElementById('teamGrid');
-                const template = document.getElementById('teamCardTemplate');
-                if (addBtn && teamGrid && template) addBtn.addEventListener('click', function () { const clone = template.content.cloneNode(true); teamGrid.appendChild(clone); setTimeout(() => { const cards = teamGrid.querySelectorAll('.team-card'); if (cards.length) cards[cards.length - 1].scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 50); });
-            });
-        </script>
+        <!-- External scripts -->
+        <script src="modal.js"></script>
+        <script src="team.js"></script>
     </body>
     </html>
