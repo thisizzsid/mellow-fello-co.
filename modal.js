@@ -1,4 +1,4 @@
-// modal.js — health warning modal behavior
+// modal.js — show health warning modal on each page open
 (function () {
     function showHealthModal() {
         var modal = document.getElementById('healthWarningModal');

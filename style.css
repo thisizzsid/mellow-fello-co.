@@ -1,0 +1,26 @@
+/* Custom site styles (kept minimal; Tailwind handles most layout)
+   Saved at: my-website/style.css
+*/
+
+/* Smooth scroll for navigation */
+html { scroll-behavior: smooth; }
+
+/* Subtle texture for hero — matches original inline style */
+.hero-bg {
+  background-color: #8a9a5b;
+  background-image: radial-gradient(circle at 100% 150%, rgba(255,255,255,.1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,.05) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Founder photo fallback style if using the class */
+.founder-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(138, 154, 91, 0.3);
+}
+
+/* Small utility: visible modal override in case JS toggles 'hidden' */
+.modal-visible { display: flex !important; }
